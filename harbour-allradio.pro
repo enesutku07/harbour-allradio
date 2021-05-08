@@ -109,10 +109,6 @@ OTHER_FILES += qml/harbour-allradio.qml \
     qml/pages/SleepTimerPage.qml \
     qml/pages/PlayerPanel.qml \
     qml/pages/ValuePicker.qml \
-    translations/harbour-allradio-da.ts \
-    translations/harbour-allradio-en.ts \
-    translations/harbour-allradio-sv.ts \
-    translations/harbour-allradio-fi.ts \
     qml/harbour-allradio.png \
     qml/stations/Vatican.png \
     qml/stations/Ukraine.png \
@@ -288,14 +284,14 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 #TRANSLATIONS += translations/harbour-allradio-en.ts
-TRANSLATIONS += translations/harbour-allradio-da.ts
-TRANSLATIONS += translations/harbour-allradio-sv.ts
-TRANSLATIONS += translations/harbour-allradio-it.ts
-TRANSLATIONS += translations/harbour-allradio-nl.ts
-TRANSLATIONS += translations/harbour-allradio-es.ts
-TRANSLATIONS += translations/harbour-allradio-ru.ts
+#TRANSLATIONS += translations/harbour-allradio-da.ts
+#TRANSLATIONS += translations/harbour-allradio-sv.ts
+#TRANSLATIONS += translations/harbour-allradio-it.ts
+#TRANSLATIONS += translations/harbour-allradio-nl.ts
+#TRANSLATIONS += translations/harbour-allradio-es.ts
+#TRANSLATIONS += translations/harbour-allradio-ru.ts
 TRANSLATIONS += translations/harbour-allradio-tr.ts
-TRANSLATIONS += translations/harbour-allradio-fi.ts
+#TRANSLATIONS += translations/harbour-allradio-fi.ts
 
 DISTFILES += \
     qml/pages/CountryNameModel.qml \
@@ -900,6 +896,5 @@ DISTFILES += \
     qml/allradio-data/images/united kingdom.png \
     qml/allradio-data/images/united states of america.png \
     qml/allradio-data/images/mauritania.png \
-    translations/harbour-allradio-nl.ts \
-    translations/harbour-allradio-it.ts
+    translations/harbour-allradio-tr.ts
 
