@@ -221,7 +221,7 @@ Page {
              MenuItem {
                  id:mlisten
                  visible: true
-                 text: qsTr("Listen")
+                 text: qsTr("Dinle")
                  onClicked: {
                      internal ? ps(source) : cps(model.stationuuid)
                      radioStation = internal ? title : name
@@ -233,19 +233,19 @@ Page {
              MenuItem {
                  id:mrep
                  visible: oldsource !== "" ? true : false
-                 text: qsTr("Replace in favorites")  // source, title, site, section, icon, old, codec, bitrate
+                 text: qsTr("Favorileri yenile")  // source, title, site, section, icon, old, codec, bitrate
                  onClicked: {updateDb(oldsource,stationuuid,lastchangetime,url,name,homepage,tags,country,codec,bitrate);window.pageStack.pop()}
                  }
              MenuItem {
                  id:madd
                  visible: !mrep.visible
-                 text: qsTr("Add to favorites")  // id, lastchangetime, source, title, site, tags, icon, codec, bitrate
+                 text: qsTr("Favoriler ekle")  // id, lastchangetime, source, title, site, tags, icon, codec, bitrate
                  onClicked: addDb(stationuuid,lastchangetime,url,name,homepage,tags,country,codec,bitrate)
                  }
              MenuItem {
                  id:mdelete
                  visible: favorites
-                 text: qsTr("Delete favourite")
+                 text: qsTr("Favori sil")
 
                  onClicked: remove()//listView.currentItem.remove(rpindex,rpsource) //listView.remorseAction();
              }
@@ -254,8 +254,8 @@ Page {
 
         ViewPlaceholder {
             enabled: listView.count === 0 //|| jsonModel1.jsonready
-            text: qsTr("Search radio stations")
-            hintText: qsTr("Enter (or change) text in searchfield")
+            text: qsTr("Radyo istasyonlarını ara ")
+            hintText: qsTr("Arama alanına metni girin (veya değiştirin)")
         }
 
         PullMenu {

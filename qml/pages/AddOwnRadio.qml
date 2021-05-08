@@ -88,7 +88,7 @@ Dialog {
             TextField {
                 id: homepageField
                 width: parent.width
-                placeholderText: qsTr("Homepage")
+                placeholderText: qsTr("Anasayfa")
                 inputMethodHints: Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.onClicked: {focus = false;countryField.focus = true}
@@ -104,7 +104,7 @@ Dialog {
             TextField {
                 id: countryField
                 width: parent.width
-                placeholderText: qsTr("Country")
+                placeholderText: qsTr("Ülke")
                 //inputMethodHints: Qt.ImhNoPredictiveText | Qt.Im
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.onClicked: {focus = false;countryMenu.hide();;languageField.focus = true}
@@ -112,7 +112,7 @@ Dialog {
 
                 onClicked:  playerPanel.open = false
                 onTextChanged: if (text.length > 1)  {first = text.charAt(0);getIt.source = "https://www.radio-browser.info/webservice/json/countries/"+text;countryMenu.show(countryCombo)} else {first="";getIt.source = ""; countryMenu.hide();getIt.model.clear()}
-                label: focus ? qsTr("Country") : ""
+                label: focus ? qsTr("Ülke") : ""
             }
 
            /*  ListItem {
@@ -137,14 +137,14 @@ Dialog {
             TextField {
                 id: languageField
                 width: parent.width
-                placeholderText: qsTr("Language")
+                placeholderText: qsTr("Dil")
                 inputMethodHints: Qt.ImhNoPredictiveText | Qt.Imh
                 EnterKey.iconSource: "image://theme/icon-m-enter-next"
                 EnterKey.onClicked: {focus = false;languageMenu.hide();sectionField.focus = true}
                 focus: false;
                 onClicked:  playerPanel.open = false
                 onTextChanged: if (text.length > 1)  {first=text.charAt(0);getIt.source = "https://www.radio-browser.info/webservice/json/languages/"+text;languageMenu.show(languageCombo)} else {getIt.source = "";first="";getIt.model.clear(); languageMenu.hide()}
-                label: focus ? qsTr("Language") : ""
+                label: focus ? qsTr("Dil") : ""
             }
 
             ListItem {

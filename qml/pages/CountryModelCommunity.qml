@@ -4,7 +4,7 @@ ListModel {
     id: countryModel
 
  //   ListElement {coid: "0"}
-    ListElement {coid: ""}
+/*    ListElement {coid: ""}
     ListElement {coid: "afghanistan"}
     ListElement {coid: "albania"}
     ListElement {coid: "algeria"}
@@ -115,7 +115,6 @@ ListModel {
     ListElement {coid: "thailand"}
     ListElement {coid: "trinidad and tobago"}
     ListElement {coid: "tunisia"}
-    ListElement {coid: "turkey"}
     ListElement {coid: "uganda"}
     ListElement {coid: "ukraine"}
     ListElement {coid: "united arab emirates"}
@@ -124,13 +123,15 @@ ListModel {
     ListElement {coid: "uruguay"}
     ListElement {coid: "vatican"}
     ListElement {coid: "venezuela"}
-    ListElement {coid: "yemen"}
+    ListElement {coid: "yemen"} */
+    ListElement {coid: "turkey"}
     function countryname(index) {
         if (countryname["text"] === undefined) {
             countryname.text = [
                     //    qsTr("Add favorite"),
-                        qsTr("No country?"),
-                        qsTr("Afghanistan"),
+//                        qsTr("Ülke yok?"),
+                        qsTr("Türkiye"),
+/*                        qsTr("Afghanistan"),
                         qsTr("Albania"),
                         qsTr("Algeria"),
                         qsTr("Andorra"),
@@ -239,9 +240,8 @@ ListModel {
                         qsTr("Syria"),
                         qsTr("Thailand"),
                         qsTr("Trinidad and Tobago"),
-                        qsTr("Tunisia"),
-                        qsTr("Turkey"),
-                        qsTr("Uganda"),
+                        qsTr("Tunisia"), */
+/*                        qsTr("Uganda"),
                         qsTr("Ukraine"),
                         qsTr("United Arab Emirates"),
                         qsTr("United Kingdom"),
@@ -249,7 +249,7 @@ ListModel {
                         qsTr("Uruguay"),
                         qsTr("Vatican"),
                         qsTr("Venezuela"),
-                        qsTr("Yemen")
+                        qsTr("Yemen") */
                     ]
             }
         return countryname.text[index]

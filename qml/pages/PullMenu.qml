@@ -7,15 +7,15 @@ PullDownMenu {
         onClicked: dropDb()
     } */
     MenuItem {
-        text: qsTr("Help")
+        text: qsTr("Yardım")
         onClicked: pageStack.push(Qt.resolvedUrl("Help.qml"))
     }
     MenuItem {
-        text: qsTr("About AllRadio")
+        text: qsTr("AllRadio Hakkında")
         onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
     }
     MenuItem {
-        text: qsTr("Sleep timer")
+        text: qsTr("Uyku zamanı")
         onClicked: pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
     }
 }

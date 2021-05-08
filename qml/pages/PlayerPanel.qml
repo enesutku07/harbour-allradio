@@ -54,7 +54,7 @@ DockedPanel {
                 anchors.rightMargin: Theme.paddingMedium
                 width: parent.widt - pause.width
                 onClicked: {
-                    remorse.execute(qsTr("Opening webpage"), function() {Qt.openUrlExternally(website)}, 3000)
+                    remorse.execute(qsTr("web sayfası açılıyor"), function() {Qt.openUrlExternally(website)}, 3000)
                  //   window.pageStack.push(Qt.resolvedUrl("RadioWeb.qml"),{surl: website})
                 }
 

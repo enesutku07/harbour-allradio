@@ -113,13 +113,13 @@ Page {
                  id: text
                  text: {
                      switch (rsource) {
-                         case 1: qsTr("Country")+" ("+countries+")";break;
-                         case 2: qsTr("Tag")+" ("+tags+")";break
-                         case 3: qsTr("Name")+" ("+stations+")";break
-                         case 4: qsTr("New/changed")+" (50)";break
-                         case 5: qsTr("Latest played")+" (50)";break
-                         case 6: qsTr("Most played")+" (50)";break
-                         case 7: qsTr("Most liked")+" (50)";break
+                         case 1: qsTr("Ülke")+" ("+countries+")";break;
+                         case 2: qsTr("etiket")+" ("+tags+")";break
+                         case 3: qsTr("isim")+" ("+stations+")";break
+                         case 4: qsTr("Yeni/Değişik")+" (50)";break
+                         case 5: qsTr("Son oynatılan")+" (50)";break
+                         case 6: qsTr("En çok oynatılan")+" (50)";break
+                         case 7: qsTr("En çok beğenilen")+" (50)";break
                      }
                  }
 
@@ -137,12 +137,12 @@ Page {
             onClicked: {
                 switch (rsource) {
                     case 1: pageStack.push(Qt.resolvedUrl("CountryChooser.qml"));break;
-                    case 2: window.pageStack.push(Qt.resolvedUrl("Tags.qml"), {searchtitle: qsTr("Search by tag"),searchby: "bytag"});break
-                    case 3: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "byname",searchtitle: qsTr("Search by name"),source: ""});break
-                    case 4: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "lastchange",searchtitle: qsTr("Search by new/changed"),source: "http://all.api.radio-browser.info/json/stations/lastchange/50"});break
-                    case 5: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "lastplay",searchtitle: qsTr("Search by Latest played"),source: "http://all.api.radio-browser.info/json/stations/lastclick/50"});break
-                    case 6: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "mostclick",searchtitle: qsTr("Search by Most played"),source: "http://all.api.radio-browser.info/json/stations/topclick/50"});break
-                    case 7: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "mostvote",searchtitle: qsTr("Search by Most likes"),source: "http://all.api.radio-browser.info/json/stations/topvote/50"});break
+                    case 2: window.pageStack.push(Qt.resolvedUrl("Tags.qml"), {searchtitle: qsTr("Etikete göre ara "),searchby: "bytag"});break
+                    case 3: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "byname",searchtitle: qsTr("Ada göre ara "),source: ""});break
+                    case 4: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "lastchange",searchtitle: qsTr("Yeniye / değişime göre ara "),source: "http://all.api.radio-browser.info/json/stations/lastchange/50"});break
+                    case 5: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "lastplay",searchtitle: qsTr("En son oynatılana göre ara "),source: "http://all.api.radio-browser.info/json/stations/lastclick/50"});break
+                    case 6: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "mostclick",searchtitle: qsTr("En çok oynananlara göre ara"),source: "http://all.api.radio-browser.info/json/stations/topclick/50"});break
+                    case 7: window.pageStack.push(Qt.resolvedUrl("Search.qml"),{searchby: "mostvote",searchtitle: qsTr("En çok beğeniye göre ara "),source: "http://all.api.radio-browser.info/json/stations/topvote/50"});break
                 }
             }
         }

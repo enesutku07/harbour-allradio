@@ -21,7 +21,7 @@ Page {
             sortby: internal ? "title" : sortnew ? "lastchangetime" : ""
             filterby: filter
             filterkey: key
-        }
+        }//burasısanırım radyo listesi için gerekli
 
         model: jsonModel1.model
 
@@ -164,7 +164,7 @@ Page {
                     MenuItem {
                         id:mlisten
                         visible: true
-                        text: qsTr("Listen")
+                        text: qsTr("Dinle")
                         onClicked: {
                             internal ? ps(source) : cps(model.stationuuid)
                             radioStation = internal ? title : name
@@ -176,13 +176,13 @@ Page {
                     MenuItem {
                         id:madd
                         visible: !favorites
-                        text: qsTr("Add to favorites")  // id, lastchangetime, source, title, site, tags, icon, codec, bitrate
+                        text: qsTr("Favori ekle")  // id, lastchangetime, source, title, site, tags, icon, codec, bitrate
                         onClicked: addDb(stationuuid,lastchangetime,url,name,homepage,tags,country,codec,bitrate)
                         }
                     MenuItem {
                         id:mdelete
                         visible: favorites
-                        text: qsTr("Delete favourite")
+                        text: qsTr("Favori sil")
 
                         onClicked: remove()//listView.currentItem.remove(rpindex,rpsource) //listView.remorseAction();
                     }
@@ -193,13 +193,13 @@ Page {
                 MenuItem {
                     id: name
                     visible: sortnew
-                    text: qsTr("Sort by name")
+                    text: qsTr("İsme göre sırala")
                     onClicked: sortnew = false//pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
                 }
 
                 MenuItem {
                     visible: !sortnew
-                    text: qsTr("Sort by newest/changed")
+                    text: qsTr("En yeniye / değişime göre sırala ")
                     onClicked: sortnew = true//pageStack.push(Qt.resolvedUrl("SleepTimerPage.qml"))
                 }
             }

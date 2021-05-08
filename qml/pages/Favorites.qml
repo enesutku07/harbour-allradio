@@ -82,8 +82,8 @@ Page {
 
         header: PageHeader {
             id: pHeader
-            title: qsTr("Favorites")
-            description: qsTr("Find radio stations")
+            title: qsTr("Favori")
+            description: qsTr("Radyo istasyonları ara")
 
             Image {
                id: logo
@@ -209,7 +209,7 @@ Page {
                      MenuItem {
                          id:mlisten
                          visible: true
-                         text: qsTr("Listen")
+                         text: qsTr("Dinle")
                          onClicked: {
                              internal ? ps(source) : model.id == 0 ? ps(source) : cps(model.id)
                              radioStation = title
@@ -236,15 +236,15 @@ Page {
                      MenuItem {
                          id:medit
                          visible: icon == "0" ? true : false
-                         text: qsTr("Edit")
+                         text: qsTr("Düzenle")
 
                          onClicked: window.pageStack.push(Qt.resolvedUrl("AddOwnRadio.qml"),
-                                                          {infotext: qsTr("Edit radio station"),titlfield: title,streamurlfield: source,homepagefield: site,sectionfield: section,oldsource: source})
+                                                          {infotext: qsTr("Radyo istasyonu düzenle"),titlfield: title,streamurlfield: source,homepagefield: site,sectionfield: section,oldsource: source})
                      }
 
                      MenuItem {
                          id:mdelete
-                         text: qsTr("Delete")
+                         text: qsTr("Sil")
 
                          onClicked: remove()//listView.currentItem.remove(rpindex,rpsource) //listView.remorseAction();
                      }
@@ -252,7 +252,7 @@ Page {
                      MenuItem {
                          id:msearch
                          visible: id == 0 ? true : false
-                         text: qsTr("Search and replace")
+                         text: qsTr("Ara ve yenile")
 
                          onClicked: window.pageStack.push(Qt.resolvedUrl("Search.qml"),
                                                           {searchterm: model.title,oldsource: source,searchby: "byname"})
@@ -262,8 +262,8 @@ Page {
 
             ViewPlaceholder {
                 enabled: listView.count <= 0 && allready == true //|| jsonModel1.jsonready
-                text: qsTr("Favorites empty")
-                hintText: qsTr("click here to add some favorites")
+                text: qsTr("Favoriler boş")
+                hintText: qsTr("bazı favoriler eklemek için burayı tıklayın ")
                 textFormat: Text.StyledText
             }
             MouseArea {
@@ -278,7 +278,7 @@ Page {
                     onClicked: pageStack.push(Qt.resolvedUrl("AddOwnRadio.qml"))
                 } */
                 MenuItem {
-                    text: qsTr("Find radio stations")
+                    text: qsTr("Radyo istasyonlarını bulun")
                     onClicked: pageStack.push(pageStack.nextPage())
                 }
             }

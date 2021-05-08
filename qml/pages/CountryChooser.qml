@@ -40,7 +40,7 @@ Page {
       //  model: internal ? countryModel : getCountries.model
 model: internal ? countryModel : getCountries.model
         header: PageHeader {
-            title: !internal ? qsTr("Countries") : "Internal (listenlive.eu)"
+            title: !internal ? qsTr("Ülkeler") : "Internal (listenlive.eu)"
            // height: choose._menuOpen ? choose.contentHeight + choose.height : choose.height
 
         /*    ComboBox {
@@ -91,15 +91,15 @@ model: internal ? countryModel : getCountries.model
 
         PullMenu {
             MenuItem {
-                text: qsTr("Show as list")
+                text: qsTr("Liste olarak göster")
                 onClicked: grid.visible = false
             }
         }
 
         ViewPlaceholder {
             enabled: grid.count === 0 //|| jsonModel1.jsonready
-            text: qsTr("No countries!?")
-            hintText: qsTr("Be patient or check connection!")
+            text: qsTr("Ülkeler yok")
+            hintText: qsTr("Sabırlı olun veya bağlantıyı kontrol edin! ")
         }
 
         ScrollDecorator {}
@@ -171,15 +171,15 @@ model: internal ? countryModel : getCountries.model
 
         PullMenu {
             MenuItem {
-                text: qsTr("Show as grid")
+                text: qsTr("Izgara olarak göster ")
                 onClicked: grid.visible = true
             }
         }
 
         ViewPlaceholder {
             enabled: list.count === 0 //|| jsonModel1.jsonready
-            text: qsTr("No countries!?")
-            hintText: qsTr("Be patient or check connection!")
+            text: qsTr("Ülkeler yok")
+            hintText: qsTr("Sabırlı olun veya bağlantıyı kontrol edin! ")
         }
     }
 

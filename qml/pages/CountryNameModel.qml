@@ -3,7 +3,7 @@ import QtQuick 2.0
 ListModel {
     id: countryNameModel
 
-    ListElement {code: "AF"}
+/*    ListElement {code: "AF"}
     ListElement {code: "AX"}
     ListElement {code: "AL"}
     ListElement {code: "DZ"}
@@ -230,7 +230,6 @@ ListModel {
     ListElement {code: "TO"}
     ListElement {code: "TT"}
     ListElement {code: "TN"}
-    ListElement {code: "TR"}
     ListElement {code: "TM"}
     ListElement {code: "TC"}
     ListElement {code: "TV"}
@@ -252,14 +251,15 @@ ListModel {
     ListElement {code: "YE"}
     ListElement {code: "ZM"}
     ListElement {code: "ZW"}
-    ListElement {code: "XK"}
-    ListElement {code: "ZZXX"}
+    ListElement {code: "XK"} */
+    ListElement {code: "TR"}
+//    ListElement {code: "ZZXX"}
 
     // Workaround to be able to use qsTr for translating the country names (qsTr doesn't work in ListModel/ListElement ... :( ..)
     function countryname(index) {
         if (countryname["text"] === undefined) {
             countryname.text = [
-                        qsTr("Afghanistan"),
+/*                        qsTr("Afghanistan"),
                         qsTr("Åland Islands"),
                         qsTr("Albania"),
                         qsTr("Algeria"),
@@ -486,7 +486,6 @@ ListModel {
                         qsTr("Tonga"),
                         qsTr("Trinidad & Tobago"),
                         qsTr("Tunisia"),
-                        qsTr("Turkey"),
                         qsTr("Turkmenistan"),
                         qsTr("Turks & Caicos Islands"),
                         qsTr("Tuvalu"),
@@ -508,8 +507,9 @@ ListModel {
                         qsTr("Yemen"),
                         qsTr("Zambia"),
                         qsTr("Zimbabwe "),
-                        qsTr("Kosovo"),
-                        qsTr("No country")
+                        qsTr("Kosovo"), */
+//                        qsTr("Ülke yok"),
+                        qsTr("Türkiye"),
             ]
             }
         return countryname.text[index]

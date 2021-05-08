@@ -4,7 +4,7 @@ ListModel {
     id: countryModel
 
    // ListElement {coid: "0"}
-    ListElement {coid: "albania"}
+/*    ListElement {coid: "albania"}
     ListElement {coid: "andorra"}
     ListElement {coid: "armenia"}
     ListElement {coid: "austria"}
@@ -50,17 +50,17 @@ ListModel {
     ListElement {coid: "slovenia"}
     ListElement {coid: "spain"}
     ListElement {coid: "sweden"}
-    ListElement {coid: "switzerland"}
+    ListElement {coid: "switzerland"} */
     ListElement {coid: "turkey"}
-    ListElement {coid: "uk"}
+/*    ListElement {coid: "uk"}
     ListElement {coid: "ukraine"}
-    ListElement {coid: "vatican"}
+    ListElement {coid: "vatican"} */
     // Workaround to be able to use qsTr for translating the country names (qsTr doesn't work in ListModel/ListElement ... :( ..)
     function countryname(index) {
         if (countryname["text"] === undefined) {
             countryname.text = [
            //     qsTr("Add favorite"),
-                qsTr("Albania"),
+/*                qsTr("Albania"),
                 qsTr("Andorra"),
                 qsTr("Armenia"),
                 qsTr("Austria"),
@@ -106,11 +106,12 @@ ListModel {
                 qsTr("Slovenia"),
                 qsTr("Spain"),
                 qsTr("Sweden"),
-                qsTr("Switzerland"),
-                qsTr("Turkey"),
-                qsTr("UK"),
+                qsTr("Switzerland"), */
+//                qsTr("Ülke yok?"),
+                qsTr("Türkiye"),
+/*                qsTr("UK"),
                 qsTr("Ukraine"),
-                qsTr("Vatican")
+                qsTr("Vatican") */
             ]
             }
         return countryname.text[index]

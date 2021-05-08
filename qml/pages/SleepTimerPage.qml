@@ -7,7 +7,7 @@ Page {
     SilicaFlickable {
         anchors.fill: parent
         VerticalScrollDecorator {}
-            PageHeader {title:((sleepTime > 0) ? (qsTr("Remaning time: ") + (sleepTime) + qsTr(" minutes")) : qsTr("choose time: ") + minutes.value )}
+            PageHeader {title:((sleepTime > 0) ? (qsTr("Kalan süre: ") + (sleepTime) + qsTr(" dakika")) : qsTr("zaman seç : ") + minutes.value )}
 
             ValuePicker {
                 id: minutes
@@ -32,11 +32,11 @@ Page {
                 spacing: Theme.paddingLarge
 
                 Button {
-                        text: ((sleepTime > 0) ? (qsTr("Change")) : (qsTr("Start")))
+                        text: ((sleepTime > 0) ? (qsTr("Değişiklik")) : (qsTr("Başla")))
                         onPressed: sleepTime = minutes.value
                     }
                 Button {
-                        text: qsTr("Stop")
+                        text: qsTr("Dur")
                         onPressed: sleepTime = 0;
                     }
             }

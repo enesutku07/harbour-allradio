@@ -16,7 +16,7 @@ Page {
 
         PageHeader {
             id: header
-            title: qsTr("About")
+            title: qsTr("HAKKINDA")
         }
 
         Row {
@@ -42,7 +42,7 @@ Page {
 
         MouseArea {
             anchors.fill: logorow
-            onClicked: remorse.execute(qsTr("Opening GitHub"), function() {Qt.openUrlExternally("https://github.com/nesnomis/harbour-allradio")}, 3000)
+            onClicked: remorse.execute(qsTr("github açılıyor"), function() {Qt.openUrlExternally("https://github.com/enesutku07/harbour-allradio")}, 3000)
         }
 
         Text {
@@ -60,7 +60,7 @@ Page {
             wrapMode: Text.WordWrap
             color: Theme.primaryColor
             linkColor: Theme.highlightColor
-            onLinkActivated: remorse.execute(qsTr("Opening webpage"), function() {Qt.openUrlExternally(link)}, 3000)
+            onLinkActivated: remorse.execute(qsTr("internet sayfası açılıyor"), function() {Qt.openUrlExternally(link)}, 3000)
             textFormat: Text.StyledText
             font.pixelSize: Theme.fontSizeSmall
             horizontalAlignment: Text.AlignHCenter
@@ -103,7 +103,7 @@ Page {
             wrapMode: Text.WordWrap
             color: Theme.primaryColor
             linkColor: Theme.highlightColor
-            onLinkActivated: remorse.execute(qsTr("Opening webpage"), function() {Qt.openUrlExternally(link)}, 3000)
+            onLinkActivated: remorse.execute(qsTr("internet sayfası açılıyor"), function() {Qt.openUrlExternally(link)}, 3000)
             textFormat: Text.StyledText
             font.pixelSize: Theme.fontSizeSmall
             horizontalAlignment: Text.AlignHCenter
